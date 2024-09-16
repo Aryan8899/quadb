@@ -1,0 +1,323 @@
+/* Base Styling */
+body {
+    background-color: #0b0b0d;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Section */
+.header {
+    background-color: #181818;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Title (Logo) */
+.title {
+    font-size: 2.5rem;
+    color: #00ffdb;
+    margin: 0;
+    padding-left: 20px;
+}
+
+/* Currency Section */
+.currency-section {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.currency-btn {
+    background-color: #2e2e38;
+    color: white;
+    border: 2px solid #2e2e38;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.currency-btn:hover {
+    background-color: #40404a;
+    border-color: #40404a;
+}
+
+/* Telegram Section */
+.telegram-section {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.counter {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #1f1f2e;
+    color: #00ffdb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.btn {
+    background-color: #2e2e38;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btnn {
+    background-color: #00ffdb;
+    color: #1f1f2e;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.btnn i {
+    margin-right: 10px;
+}
+
+.btn:hover {
+    background-color: #40404a;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+    position: relative;
+    width: 50px;
+    height: 24px;
+}
+
+.toggle-switch input {
+    display: none;
+}
+
+.toggle-switch label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1f1f2e;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+.toggle-switch label:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #00ffdb;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: 0.3s;
+}
+
+.toggle-switch input:checked + label:after {
+    left: 28px;
+}
+
+/* Best Price to Trade Section */
+.best-price-section {
+    text-align: center;
+    padding: 10px;
+    background-color: #181818;
+    color: #00ffdb;
+}
+
+.best-price-section h2 {
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.price-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.left-prices, .right-prices {
+    display: flex;
+    gap: 120px;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-top: 40px;
+}
+
+.main-price {
+    text-align: center;
+    color: white;
+    margin-bottom: -1px;
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.price-info {
+    font-size: 1rem;
+    color: #a0a0a0;
+}
+
+/* Table Section */
+.table-container {
+    width: 90%;
+    margin: 20px auto;
+    background-color: #1b1b22;
+    padding: 10px;
+    border-radius: 10px;
+    overflow-x: auto; /* Ensures the table is scrollable on smaller screens */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    border-bottom: 1px solid #303030;
+    font-size: 1.2rem;
+}
+
+th {
+    background-color: #1f1f2e;
+    font-weight: bold;
+    text-align: center;
+}
+
+td {
+    background-color: #1b1b22;
+    text-align: center;
+    padding: 10px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #262626;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #1b1b22;
+}
+
+tbody tr:hover {
+    background-color: #333333;
+}
+
+/* Highlight Savings */
+.savings-positive {
+    color: #00ffdb;
+}
+
+.savings-negative {
+    color: #ff4d4f;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    /* Adjustments for tablets */
+    .price-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .left-prices, .right-prices {
+        margin: 0;
+        gap: 50px;
+        font-size: 1rem;
+    }
+
+    .main-price .price {
+        font-size: 2rem;
+    }
+
+    .price-info {
+        font-size: 0.9rem;
+    }
+
+    .header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .currency-section, .telegram-section {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Adjustments for mobile devices */
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .currency-section {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .telegram-section {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .price-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .left-prices, .right-prices {
+        gap: 20px;
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    .main-price .price {
+        font-size: 2rem;
+    }
+
+    .btn, .btnn {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .table-container {
+        width: 100%;
+        margin: 10px;
+    }
+
+    th, td {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HODLINFO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <h1 class="title">HODLINFO</h1>
+        <div class="currency-section">
+            <button class="currency-btn">INR <span class="dropdown-arrow">&#9660;</span></button>
+            <button class="currency-btn">BTC <span class="dropdown-arrow">&#9660;</span></button>
+            <button class="btn">Buy BTC</button>
+        </div>
+        <div class="telegram-section">
+            
+            <button class="btnn"><i class="telegram-icon"></i> Connect Telegram</button>
+            <div class="toggle-switch">
+                <input type="checkbox" id="switch" />
+                <label for="switch"></label>
+            </div>
+        </div>
+    </header>
+
+    <!-- Best Price to Trade Section -->
+    <section class="best-price-section">
+        <h2>Best Price to Trade</h2>
+        <div class="price-container">
+            <div class="left-prices">
+                <div class="price-card no-box">
+                    <p class="percent">0.1%</p>
+                    <p class="text">5 Mins</p>
+                </div>
+                <div class="price-card no-box">
+                    <p class="percent">0.96%</p>
+                    <p class="text">1 Hour</p>
+                </div>
+            </div>
+            <div class="main-price no-box">
+                <p class="price">₹ 26,56,110</p>
+                <p class="price-info">Average BTC/INR net price including commission</p>
+            </div>
+            <div class="right-prices">
+                <div class="price-card no-box">
+                    <p class="percent">2.73%</p>
+                    <p class="text">1 Day</p>
+                </div>
+                <div class="price-card no-box">
+                    <p class="percent">7.51%</p>
+                    <p class="text">7 Days</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Table -->
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Platform</th>
+                    <th>Last Traded Price</th>
+                    <th>Buy/Sell Price</th>
+                    <th>Difference</th>
+                    <th>Savings</th>
+                </tr>
+            </thead>
+            <tbody id="crypto-data"></tbody> <!-- Dynamically injected data -->
+        </table>
+    </div>
+
+    <!-- JavaScript to fetch data -->
+    <script src="app.js"></script>
+</body>
+</html>
